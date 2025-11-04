@@ -1,18 +1,68 @@
 <!DOCTYPE html>
+<html lang="uk">
 <head>
-
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz App</title>
+<link rel = "stylesheet" href="quiz.css">
 </head>
-
-
-
-
 <body>
-  <title>
+<nav class="navbar">
+<a onclick="showPage('home')">Головна</a>
+<a onclick="showPage('create')">Створити питання</a>
+<a onclick="showPage('quiz')">Пройти квіз</a>
+<a onclick="showPage('edit');">Редагувати</a>
+</nav>
 
-  </title>
+
+<section id="home" class="page active">
+<h1>Вітаємо у Quiz App!</h1>
+<p>Створюй свої питання та проходь тестування.</p>
+</section>
 
 
+<section id="create" class="page">
+<h2>Створення питання</h2>
+<label>Питання:</label>
+<textarea id="questionText"></textarea>
 
-  <script src="quiz.js"></script>
+
+<div id="answers">
+<div class="answer">
+  <input type="text" placeholder="Варіант 1" class="answer-input">
+  <input type="checkbox" class="correct-check">
+</div>
+<div class="answer">
+  <input type="text" placeholder="Варіант 2" class="answer-input">
+  <input type="checkbox" class="correct-check">
+</div>
+<div class="answer">
+  <input type="text" placeholder="Варіант 3" class="answer-input">
+  <input type="checkbox" class="correct-check">
+</div>
+<div class="answer">
+  <input type="text" placeholder="Варіант 4" class="answer-input">
+  <input type="checkbox" class="correct-check">
+</div>
+</div>
+<button onclick="saveQuestion()">Зберегти питання</button>
+</section>
+
+
+<section id="quiz" class="page">
+<h2>Квіз</h2>
+<div id="quizContainer"></div>
+<button onclick="startQuiz()">Почати квіз</button>
+<div id="result"></div>
+</section>
+
+<section id="edit" class="page">
+  <h2>Редагувати питання</h2>
+  <div id="editContainer"></div>
+  <button onclick="localStorage.clear()"></button>
+</section>
+<script src="quiz.js">
+
+</script>
 </body>
+</html>
