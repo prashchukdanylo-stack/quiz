@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="play.js" defer></script>
+  <script src="create.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">QuizKPI</h1>
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="play.html">Play</a></li>
+        <li><a href="create.html" class="active">Create</a></li>
+        <li><a href="manage.html">Manage</a></li>
+        <li><a href="results.html">Results</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="mainContent">
+    <h2>Creation of new quiz</h2>
+
+    <label>Quiz name:</label><br>
+    <input id="quizName" placeholder="Quiz name"><br><br>
+
+    <label>Description:</label><br>
+    <input id="quizDescription" placeholder="Quiz description"><br><br>
+
+    <div id="questionsArea">
+      <div class="questionContainer">
+        <h3>Question 1</h3>
+        <input class="questionInput" placeholder="Text of question"><br><br>
+        <input class="optionInput" placeholder="Option 1"><br>
+        <input class="optionInput" placeholder="Option 2"><br>
+        <input class="optionInput" placeholder="Option 3"><br>
+        <input class="optionInput" placeholder="Option 4"><br><br>
+        <input class="answerInput" placeholder="Number of correct answer"><br>
+      </div>
+    </div>
+
+    <button onclick="addQuestion()">Add question</button>
+    <button onclick="quizMaker()">Create quiz</button>
+  </main>
+</body>
+</html>
