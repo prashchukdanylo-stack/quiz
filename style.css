@@ -129,3 +129,14 @@ footer a:hover {
 .quiz-item .button:hover {
     background-color: #005fcc;
 }
+
+.result-delete {
+    background-color: #dd0b4a;
+    color: #f8f7f7;
+    border-radius: 4px;
+}
+
+.result-delete:hover {
+    background-color: #e65882;
+    cursor: pointer;
+}
